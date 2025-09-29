@@ -14,14 +14,14 @@ public class AttackEx : MonoBehaviour {
             return;
         }
 
-        float damage = -targetHealth.Damage(attackDamage);
-        if (damage <= 0.0f) {
+        float damage = targetHealth.Damage(attackDamage);
+        if (damage >= 0.0f) {
             return;
         }
 
         var lifeSteal = GetComponent<LifeSteal>();
         if (lifeSteal != null) {
-            float heal = lifeSteal.OnDealDamage(damage);
+            float heal = lifeSteal.OnDealDamage(Mathf.Abs(damage));
             Debug.Log($"{gameObject.name} 흡혈: {heal}");
         }
     }
