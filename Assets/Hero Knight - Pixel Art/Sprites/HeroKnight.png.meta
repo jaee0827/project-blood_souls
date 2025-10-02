@@ -377,12 +377,12 @@ TextureImporter:
       name: HeroKnight_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 18
+        y: 442
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: HeroKnight_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 117
+        y: 442
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -421,12 +421,12 @@ TextureImporter:
       name: HeroKnight_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 216
+        y: 442
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -443,12 +443,12 @@ TextureImporter:
       name: HeroKnight_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 316
+        y: 442
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -465,12 +465,12 @@ TextureImporter:
       name: HeroKnight_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 416
+        y: 442
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -487,12 +487,12 @@ TextureImporter:
       name: HeroKnight_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 517
+        y: 442
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -509,12 +509,12 @@ TextureImporter:
       name: HeroKnight_6
       rect:
         serializedVersion: 2
-        x: 600
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 618
+        y: 442
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -531,12 +531,12 @@ TextureImporter:
       name: HeroKnight_7
       rect:
         serializedVersion: 2
-        x: 700
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 718
+        y: 442
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -553,12 +553,12 @@ TextureImporter:
       name: HeroKnight_8
       rect:
         serializedVersion: 2
-        x: 800
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 818
+        y: 442
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -575,12 +575,12 @@ TextureImporter:
       name: HeroKnight_9
       rect:
         serializedVersion: 2
-        x: 900
-        y: 440
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 917
+        y: 442
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -597,12 +597,12 @@ TextureImporter:
       name: HeroKnight_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 17
+        y: 387
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -619,12 +619,12 @@ TextureImporter:
       name: HeroKnight_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 116
+        y: 387
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -641,12 +641,12 @@ TextureImporter:
       name: HeroKnight_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 216
+        y: 387
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -663,12 +663,12 @@ TextureImporter:
       name: HeroKnight_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 317
+        y: 387
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -685,12 +685,12 @@ TextureImporter:
       name: HeroKnight_14
       rect:
         serializedVersion: 2
-        x: 400
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 417
+        y: 387
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,12 +707,12 @@ TextureImporter:
       name: HeroKnight_15
       rect:
         serializedVersion: 2
-        x: 500
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 517
+        y: 387
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -729,12 +729,12 @@ TextureImporter:
       name: HeroKnight_16
       rect:
         serializedVersion: 2
-        x: 600
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 617
+        y: 387
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -751,12 +751,12 @@ TextureImporter:
       name: HeroKnight_17
       rect:
         serializedVersion: 2
-        x: 700
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 717
+        y: 387
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -773,12 +773,12 @@ TextureImporter:
       name: HeroKnight_18
       rect:
         serializedVersion: 2
-        x: 800
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 821
+        y: 387
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -795,12 +795,12 @@ TextureImporter:
       name: HeroKnight_19
       rect:
         serializedVersion: 2
-        x: 900
-        y: 385
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 935
+        y: 387
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -817,12 +817,12 @@ TextureImporter:
       name: HeroKnight_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 22
+        y: 332
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -839,12 +839,12 @@ TextureImporter:
       name: HeroKnight_21
       rect:
         serializedVersion: 2
-        x: 100
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 37
+        y: 341
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -861,12 +861,12 @@ TextureImporter:
       name: HeroKnight_22
       rect:
         serializedVersion: 2
-        x: 200
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 122
+        y: 332
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -883,12 +883,12 @@ TextureImporter:
       name: HeroKnight_23
       rect:
         serializedVersion: 2
-        x: 300
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 225
+        y: 332
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -905,12 +905,12 @@ TextureImporter:
       name: HeroKnight_24
       rect:
         serializedVersion: 2
-        x: 400
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 335
+        y: 332
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -927,12 +927,12 @@ TextureImporter:
       name: HeroKnight_25
       rect:
         serializedVersion: 2
-        x: 500
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 435
+        y: 332
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -949,12 +949,12 @@ TextureImporter:
       name: HeroKnight_26
       rect:
         serializedVersion: 2
-        x: 600
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 511
+        y: 332
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -971,12 +971,12 @@ TextureImporter:
       name: HeroKnight_27
       rect:
         serializedVersion: 2
-        x: 700
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 553
+        y: 351
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -993,12 +993,12 @@ TextureImporter:
       name: HeroKnight_28
       rect:
         serializedVersion: 2
-        x: 800
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 611
+        y: 332
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1015,12 +1015,12 @@ TextureImporter:
       name: HeroKnight_29
       rect:
         serializedVersion: 2
-        x: 900
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 710
+        y: 332
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1037,12 +1037,12 @@ TextureImporter:
       name: HeroKnight_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 810
+        y: 332
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1059,12 +1059,12 @@ TextureImporter:
       name: HeroKnight_31
       rect:
         serializedVersion: 2
-        x: 100
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 914
+        y: 332
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1081,12 +1081,12 @@ TextureImporter:
       name: HeroKnight_32
       rect:
         serializedVersion: 2
-        x: 200
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 19
+        y: 277
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1103,12 +1103,12 @@ TextureImporter:
       name: HeroKnight_33
       rect:
         serializedVersion: 2
-        x: 300
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 135
+        y: 277
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1125,12 +1125,12 @@ TextureImporter:
       name: HeroKnight_34
       rect:
         serializedVersion: 2
-        x: 400
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 234
+        y: 277
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1147,12 +1147,12 @@ TextureImporter:
       name: HeroKnight_35
       rect:
         serializedVersion: 2
-        x: 500
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 282
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1169,12 +1169,12 @@ TextureImporter:
       name: HeroKnight_36
       rect:
         serializedVersion: 2
-        x: 600
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 333
+        y: 277
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1191,12 +1191,12 @@ TextureImporter:
       name: HeroKnight_37
       rect:
         serializedVersion: 2
-        x: 700
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 433
+        y: 277
+        width: 67
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1213,12 +1213,12 @@ TextureImporter:
       name: HeroKnight_38
       rect:
         serializedVersion: 2
-        x: 800
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 494
+        y: 282
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1235,12 +1235,12 @@ TextureImporter:
       name: HeroKnight_39
       rect:
         serializedVersion: 2
-        x: 900
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 533
+        y: 277
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1257,12 +1257,12 @@ TextureImporter:
       name: HeroKnight_40
       rect:
         serializedVersion: 2
-        x: 0
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 640
+        y: 277
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1279,12 +1279,12 @@ TextureImporter:
       name: HeroKnight_41
       rect:
         serializedVersion: 2
-        x: 100
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 720
+        y: 277
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1301,12 +1301,12 @@ TextureImporter:
       name: HeroKnight_42
       rect:
         serializedVersion: 2
-        x: 200
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 818
+        y: 277
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1323,12 +1323,12 @@ TextureImporter:
       name: HeroKnight_43
       rect:
         serializedVersion: 2
-        x: 300
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 918
+        y: 280
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1345,12 +1345,12 @@ TextureImporter:
       name: HeroKnight_44
       rect:
         serializedVersion: 2
-        x: 400
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 18
+        y: 227
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1367,12 +1367,12 @@ TextureImporter:
       name: HeroKnight_45
       rect:
         serializedVersion: 2
-        x: 500
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 117
+        y: 224
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1389,12 +1389,12 @@ TextureImporter:
       name: HeroKnight_46
       rect:
         serializedVersion: 2
-        x: 600
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 217
+        y: 224
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1411,12 +1411,12 @@ TextureImporter:
       name: HeroKnight_47
       rect:
         serializedVersion: 2
-        x: 700
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 317
+        y: 224
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1433,12 +1433,12 @@ TextureImporter:
       name: HeroKnight_48
       rect:
         serializedVersion: 2
-        x: 800
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 417
+        y: 224
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1455,12 +1455,12 @@ TextureImporter:
       name: HeroKnight_49
       rect:
         serializedVersion: 2
-        x: 900
-        y: 220
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 519
+        y: 222
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1477,12 +1477,12 @@ TextureImporter:
       name: HeroKnight_50
       rect:
         serializedVersion: 2
-        x: 0
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 616
+        y: 222
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1499,12 +1499,12 @@ TextureImporter:
       name: HeroKnight_51
       rect:
         serializedVersion: 2
-        x: 100
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 717
+        y: 222
+        width: 44
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1521,12 +1521,12 @@ TextureImporter:
       name: HeroKnight_52
       rect:
         serializedVersion: 2
-        x: 200
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 819
+        y: 222
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1543,12 +1543,12 @@ TextureImporter:
       name: HeroKnight_53
       rect:
         serializedVersion: 2
-        x: 300
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 917
+        y: 222
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1565,12 +1565,12 @@ TextureImporter:
       name: HeroKnight_54
       rect:
         serializedVersion: 2
-        x: 400
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 19
+        y: 167
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1587,12 +1587,12 @@ TextureImporter:
       name: HeroKnight_55
       rect:
         serializedVersion: 2
-        x: 500
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 115
+        y: 167
+        width: 53
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1609,12 +1609,12 @@ TextureImporter:
       name: HeroKnight_56
       rect:
         serializedVersion: 2
-        x: 600
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 214
+        y: 167
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1631,12 +1631,12 @@ TextureImporter:
       name: HeroKnight_57
       rect:
         serializedVersion: 2
-        x: 700
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 312
+        y: 167
+        width: 55
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1653,12 +1653,12 @@ TextureImporter:
       name: HeroKnight_58
       rect:
         serializedVersion: 2
-        x: 800
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 412
+        y: 167
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1675,12 +1675,12 @@ TextureImporter:
       name: HeroKnight_59
       rect:
         serializedVersion: 2
-        x: 900
-        y: 165
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 512
+        y: 167
+        width: 70
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1697,12 +1697,12 @@ TextureImporter:
       name: HeroKnight_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 612
+        y: 167
+        width: 70
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1719,12 +1719,12 @@ TextureImporter:
       name: HeroKnight_61
       rect:
         serializedVersion: 2
-        x: 100
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 712
+        y: 167
+        width: 70
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1741,12 +1741,12 @@ TextureImporter:
       name: HeroKnight_62
       rect:
         serializedVersion: 2
-        x: 200
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 820
+        y: 167
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1763,12 +1763,12 @@ TextureImporter:
       name: HeroKnight_63
       rect:
         serializedVersion: 2
-        x: 300
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 920
+        y: 167
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1785,12 +1785,12 @@ TextureImporter:
       name: HeroKnight_64
       rect:
         serializedVersion: 2
-        x: 400
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 20
+        y: 103
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1807,12 +1807,12 @@ TextureImporter:
       name: HeroKnight_65
       rect:
         serializedVersion: 2
-        x: 500
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 120
+        y: 112
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1829,12 +1829,12 @@ TextureImporter:
       name: HeroKnight_66
       rect:
         serializedVersion: 2
-        x: 600
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 220
+        y: 112
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1851,12 +1851,12 @@ TextureImporter:
       name: HeroKnight_67
       rect:
         serializedVersion: 2
-        x: 700
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 320
+        y: 112
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1873,12 +1873,12 @@ TextureImporter:
       name: HeroKnight_68
       rect:
         serializedVersion: 2
-        x: 800
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 420
+        y: 112
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1895,12 +1895,12 @@ TextureImporter:
       name: HeroKnight_69
       rect:
         serializedVersion: 2
-        x: 900
-        y: 110
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 520
+        y: 112
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1917,12 +1917,12 @@ TextureImporter:
       name: HeroKnight_70
       rect:
         serializedVersion: 2
-        x: 0
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 620
+        y: 112
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1939,12 +1939,12 @@ TextureImporter:
       name: HeroKnight_71
       rect:
         serializedVersion: 2
-        x: 100
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 718
+        y: 112
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1961,12 +1961,12 @@ TextureImporter:
       name: HeroKnight_72
       rect:
         serializedVersion: 2
-        x: 200
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 817
+        y: 112
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1983,12 +1983,12 @@ TextureImporter:
       name: HeroKnight_73
       rect:
         serializedVersion: 2
-        x: 300
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 918
+        y: 112
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2005,12 +2005,12 @@ TextureImporter:
       name: HeroKnight_74
       rect:
         serializedVersion: 2
-        x: 400
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 20
+        y: 57
+        width: 55
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2027,12 +2027,12 @@ TextureImporter:
       name: HeroKnight_75
       rect:
         serializedVersion: 2
-        x: 500
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 136
+        y: 57
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2049,12 +2049,12 @@ TextureImporter:
       name: HeroKnight_76
       rect:
         serializedVersion: 2
-        x: 600
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 236
+        y: 57
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2071,12 +2071,12 @@ TextureImporter:
       name: HeroKnight_77
       rect:
         serializedVersion: 2
-        x: 700
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 344
+        y: 57
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2093,12 +2093,12 @@ TextureImporter:
       name: HeroKnight_78
       rect:
         serializedVersion: 2
-        x: 800
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 440
+        y: 57
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2115,12 +2115,12 @@ TextureImporter:
       name: HeroKnight_79
       rect:
         serializedVersion: 2
-        x: 900
-        y: 55
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 540
+        y: 57
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2137,12 +2137,12 @@ TextureImporter:
       name: HeroKnight_80
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 640
+        y: 57
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2159,12 +2159,12 @@ TextureImporter:
       name: HeroKnight_81
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 740
+        y: 57
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2181,12 +2181,12 @@ TextureImporter:
       name: HeroKnight_82
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 838
+        y: 57
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2203,12 +2203,12 @@ TextureImporter:
       name: HeroKnight_83
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 923
+        y: 57
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2225,12 +2225,12 @@ TextureImporter:
       name: HeroKnight_84
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 18
+        y: 13
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2247,12 +2247,12 @@ TextureImporter:
       name: HeroKnight_85
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 120
+        y: 11
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2269,12 +2269,12 @@ TextureImporter:
       name: HeroKnight_86
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 222
+        y: 2
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2291,12 +2291,12 @@ TextureImporter:
       name: HeroKnight_87
       rect:
         serializedVersion: 2
-        x: 700
+        x: 331
         y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2313,12 +2313,12 @@ TextureImporter:
       name: HeroKnight_88
       rect:
         serializedVersion: 2
-        x: 800
+        x: 433
         y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2335,12 +2335,12 @@ TextureImporter:
       name: HeroKnight_89
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 531
+        y: 1
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2349,6 +2349,94 @@ TextureImporter:
       bones: []
       spriteID: ac4225d4ccbb05d41a28d08297f79bdc
       internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_90
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25e400999d615540abcee598bf8b397
+      internalID: 656072520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_91
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45659eeed1a66834c87f43d6cbb4aa25
+      internalID: -900212535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_92
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee58b0fa1c5e0d43bfa03e139694cc0
+      internalID: 743750558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_93
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36a696ff0fc19a4eaed869a830ec6a7
+      internalID: -1462237368
       vertices: []
       indices: 
       edges: []
@@ -2457,6 +2545,10 @@ TextureImporter:
       HeroKnight_88: 21300176
       HeroKnight_89: 21300178
       HeroKnight_9: 21300018
+      HeroKnight_90: 656072520
+      HeroKnight_91: -900212535
+      HeroKnight_92: 743750558
+      HeroKnight_93: -1462237368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
