@@ -83,9 +83,14 @@ public class PlayerComboAttack : MonoBehaviour
     // 피격/패링 로직 (적 Hitbox 충돌 시 호출됨)
     // =========================================================================
 
-    public void OnHitReceived(float parryWindow)
+    // 받은 피해량 저장
+    private float receivedDamage = 0.0f;
+
+    public void OnHitReceived(float parryWindow, float damage)
     {
         if (isHit) return;
+
+        receivedDamage = damage;
 
         if (currentActionCoroutine != null) StopCoroutine(currentActionCoroutine);
         isAttacking = false;
@@ -127,10 +132,15 @@ public class PlayerComboAttack : MonoBehaviour
         currentActionCoroutine = StartCoroutine(WaitAndReset(parryGoodDuration + parryRecoveryTime));
     }
 
-    void FailParry()
-    {
+    void FailParry() {
         canParryInput = false;
-        anim.SetTrigger("Hit");
+
+        Health health = GetComponent<Health>();
+        if (health == null || health.isDead || receivedDamage <= 0.0f) {
+            return;
+        }
+
+        health.Damage(receivedDamage); // 플레이어 피해
 
         currentActionCoroutine = StartCoroutine(WaitAndReset(dieDuration));
     }
