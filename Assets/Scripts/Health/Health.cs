@@ -76,7 +76,7 @@ public class Health : MonoBehaviour {
         isDead = true;
 
         if (animator != null) {
-            animator.SetTrigger("Hit"); // 사망 애니메이션 (추가되면 수정 예정)
+            animator.SetTrigger("Death"); // 사망 애니메이션
         }
 
         Debug.Log($"{gameObject.name} 사망"); // 로그 출력
