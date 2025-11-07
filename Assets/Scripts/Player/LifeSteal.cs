@@ -3,16 +3,16 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class LifeSteal : MonoBehaviour {
 
-    [Header("Stat"),Range(0.0f, 1.0f)] // 체력 배율 설정
-    public float lifeStealRate = 0.2f;
+    [Header("Stat"),Range(0, 100)] // 체력 배율 설정
+    public float lifeStealRate = 20;
 
     // 흡혈 실행 함수
     public float ExecuteSteal(float damage) {
-        if (lifeStealRate <= 0.0f) {
+        if (lifeStealRate <= 0) {
             return 0.0f;
         }
 
-        float healAmount = damage * lifeStealRate; // 흡혈량 계산
+        float healAmount = damage * lifeStealRate * 0.01f; // 흡혈량 계산
 
         Health health = GetComponent<Health>();
         if (health is null) {

@@ -6,10 +6,14 @@ public class Pattern : MonoBehaviour {
     [Header("Stat")] // 수치 설정
     public string pattern = "Pattern";
     public float damage = 10;
+    public float hitboxDuration = 0.5f;
     [Range(0, 100)]
     public float chance = 20;
     public float cool = 10;
     public float duration = 1.0f;
+    
+    [Header("Component")]
+    public GameObject hitboxObject;
 
     private float _timer;
     private bool _enabled;
@@ -31,6 +35,8 @@ public class Pattern : MonoBehaviour {
                     _enabled = false;
 
                     gameObject.tag = "UsedPattern";
+
+                    hitboxObject.GetComponent<Front>().StartAttack(damage, hitboxDuration);
 
                     Debug.Log($"{gameObject.name} 패턴 사용: {pattern}");
 

@@ -9,7 +9,7 @@ public class PlayerAttackHitbox : MonoBehaviour
 
     [Header("�����")]
     [Tooltip("�� ���� ���ݿ� �� �±׸� ���� ��� �����մϴ�.")]
-    public string targetTag = "Enemy";
+    public string targetTag = "Boss";
 
     // �� ���� ����(Ȱ��ȭ)���� �ߺ� ��Ʈ�� �����ϱ� ���� ����Ʈ
     private List<Collider2D> alreadyHit;
@@ -34,7 +34,7 @@ public class PlayerAttackHitbox : MonoBehaviour
             return;
         }
 
-        // 2. �ε��� ����� "Enemy" �±׸� ������ �ִ��� Ȯ��
+        // 2. �ε��� ����� "Boss" �±׸� ������ �ִ��� Ȯ��
         if (other.CompareTag(targetTag))
         {
             // 3. ���� 'Health.cs' ��ũ��Ʈ�� ã���ϴ�. (EnemyHealth.cs �ƴ�!)

@@ -10,7 +10,7 @@ public class AttackEx : MonoBehaviour {
         if (Input.GetKey(KeyCode.X) && !hasHit) {
             hasHit = true;
 
-            GameObject enemy = GameObject.FindGameObjectWithTag("Enemy"); // 적 지정
+            GameObject enemy = GameObject.FindGameObjectWithTag("Boss"); // 적 지정
             if (enemy == null) {
                 return;
             }
