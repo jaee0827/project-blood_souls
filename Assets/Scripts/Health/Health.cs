@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,7 +10,7 @@ public class Health : MonoBehaviour
     [Header("Stat")] // 수치 설정
     public float maxHealth = DefaultHealth;
     public float currentHealth = DefaultHealth;
-    public float drainDamage = 0.0f; // (사용자님이 추가하신 지속 데미지)
+    public float drainDamage = 0.0f;
 
     [Header("Animator")] // 애니메이터 설정
     public Animator animator;
@@ -20,11 +19,11 @@ public class Health : MonoBehaviour
     public UnityEvent<float, float> OnHealthChange;
 
     [HideInInspector]
-    public bool isDead = false; // 사망 상태 변수
+    public bool isDead; // 사망 상태 변수
 
     // --- [추가] 회피에 필요한 무적 변수 ---
     [HideInInspector]
-    public bool isInvincible = false;
+    public bool isInvincible;
     // ----------------------------------
 
 
@@ -36,18 +35,21 @@ public class Health : MonoBehaviour
         {
             animator = GetComponent<Animator>();
         }
+        
+        isDead = false;
+        isInvincible = false;
     }
 
     // 초기화 함수
     void Reset() => currentHealth = maxHealth;
 
     // (사용자님이 추가하신 Update 함수)
-    void Update()
+    void FixedUpdate()
     {
         if (drainDamage > 0.0f && !isDead)
         {
             // (참고: isInvincible이 true면 Damage 함수가 알아서 0을 반환합니다)
-            Damage(drainDamage * Time.deltaTime, true);
+            Damage(drainDamage * Time.fixedDeltaTime, true);
         }
     }
 
