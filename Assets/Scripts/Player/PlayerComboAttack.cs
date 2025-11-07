@@ -50,10 +50,10 @@ public class PlayerComboAttack : MonoBehaviour
             ResetCombo();
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             // 1. 패링 입력 체크 (Down + X)
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.M))
             {
                 if (isHit && canParryInput)
                 {
@@ -111,7 +111,7 @@ public class PlayerComboAttack : MonoBehaviour
         float timer = 0f;
         while (timer < duration)
         {
-            if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.X))
+            if (Input.GetKey(KeyCode.M) && Input.GetKey(KeyCode.N))
             {
                 SuccessParry();
                 yield break;

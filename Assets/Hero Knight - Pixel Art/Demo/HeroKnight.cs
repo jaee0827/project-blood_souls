@@ -96,14 +96,14 @@ public class HeroKnight : MonoBehaviour {
         m_animator.SetBool("WallSlide", m_isWallSliding);
 
         //Death
-        if (Input.GetKeyDown("e") && !m_rolling)
+        if (Input.GetKeyDown(KeyCode.E) && !m_rolling)
         {
             m_animator.SetBool("noBlood", m_noBlood);
             m_animator.SetTrigger("Death");
         }
             
         //Hurt
-        else if (Input.GetKeyDown("q") && !m_rolling)
+        else if (Input.GetKeyDown(KeyCode.Q) && !m_rolling)
             m_animator.SetTrigger("Hurt");
 
         //Attack
@@ -137,7 +137,7 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetBool("IdleBlock", false);
 
         // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
+        else if (Input.GetKeyDown(KeyCode.LeftShift) && !m_rolling && !m_isWallSliding)
         {
             m_rolling = true;
             m_animator.SetTrigger("Roll");
@@ -146,7 +146,7 @@ public class HeroKnight : MonoBehaviour {
             
 
         //Jump
-        else if (Input.GetKeyDown("space") && m_grounded && !m_rolling)
+        else if (Input.GetKeyDown(KeyCode.Space) && m_grounded && !m_rolling)
         {
             m_animator.SetTrigger("Jump");
             m_grounded = false;

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 
 public class PlayerAttackHitbox : MonoBehaviour
 {
-    // Health.csÀÇ Damage ÇÔ¼ö°¡ float¸¦ ¹ÞÀ¸¹Ç·Î float·Î º¯°æ
-    [Header("°ø°Ý ¼³Á¤")]
+    // Health.csï¿½ï¿½ Damage ï¿½Ô¼ï¿½ï¿½ï¿½ floatï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ floatï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public float attackDamage = 10.0f;
 
-    [Header("µð¹ö±ë")]
-    [Tooltip("ÇÑ ¹øÀÇ °ø°Ý¿¡ ÀÌ ÅÂ±×¸¦ °¡Áø ´ë»ó¸¸ °¨ÁöÇÕ´Ï´Ù.")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    [Tooltip("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¿ï¿½ ï¿½ï¿½ ï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.")]
     public string targetTag = "Enemy";
 
-    // ÇÑ ¹øÀÇ ½ºÀ®(È°¼ºÈ­)¿¡¼­ Áßº¹ È÷Æ®¸¦ ¹æÁöÇÏ±â À§ÇÑ ¸®½ºÆ®
+    // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(È°ï¿½ï¿½È­)ï¿½ï¿½ï¿½ï¿½ ï¿½ßºï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
     private List<Collider2D> alreadyHit;
 
     void OnEnable()
     {
-        // È÷Æ®¹Ú½º°¡ È°¼ºÈ­µÉ ¶§ (°ø°Ý ¾Ö´Ï¸ÞÀÌ¼ÇÀÌ ½ÃÀÛµÉ ¶§)
-        // 'ÀÌ¹Ì ¶§¸°' ¸ñ·ÏÀ» ÃÊ±âÈ­ÇÕ´Ï´Ù.
+        // ï¿½ï¿½Æ®ï¿½Ú½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ûµï¿½ ï¿½ï¿½)
+        // 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½' ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Õ´Ï´ï¿½.
         if (alreadyHit == null)
         {
             alreadyHit = new List<Collider2D>();
@@ -25,34 +25,34 @@ public class PlayerAttackHitbox : MonoBehaviour
         alreadyHit.Clear();
     }
 
-    // ÀÌ È÷Æ®¹Ú½º(Trigger)¿¡ ´©±º°¡ µé¾î¿ÔÀ» ¶§ È£ÃâµÊ
+    // ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ú½ï¿½(Trigger)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½ï¿½
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 1. ÀÌ¹Ì ÀÌ¹ø ½ºÀ®¿¡¼­ ¶§¸° ´ë»óÀÌ¸é ¹«½Ã
+        // 1. ï¿½Ì¹ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (alreadyHit.Contains(other))
         {
             return;
         }
 
-        // 2. ºÎµúÈù ´ë»óÀÌ "Enemy" ÅÂ±×¸¦ °¡Áö°í ÀÖ´ÂÁö È®ÀÎ
+        // 2. ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ "Enemy" ï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         if (other.CompareTag(targetTag))
         {
-            // 3. ÀûÀÇ 'Health.cs' ½ºÅ©¸³Æ®¸¦ Ã£½À´Ï´Ù. (EnemyHealth.cs ¾Æ´Ô!)
+            // 3. ï¿½ï¿½ï¿½ï¿½ 'Health.cs' ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½Ï´ï¿½. (EnemyHealth.cs ï¿½Æ´ï¿½!)
             Health enemyHealth = other.GetComponent<Health>();
 
             if (enemyHealth != null && !enemyHealth.isDead)
             {
-                // 4. Health ½ºÅ©¸³Æ®ÀÇ 'Damage' ÇÔ¼ö¸¦ È£ÃâÇÕ´Ï´Ù.
+                // 4. Health ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ 'Damage' ï¿½Ô¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
                 enemyHealth.Damage(attackDamage);
 
-                // 5. 'ÀÌ¹Ì ¶§¸°' ¸ñ·Ï¿¡ Ãß°¡ (Áßº¹ È÷Æ® ¹æÁö)
+                // 5. 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½' ï¿½ï¿½Ï¿ï¿½ ï¿½ß°ï¿½ (ï¿½ßºï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½)
                 alreadyHit.Add(other);
 
-                Debug.Log($"ÇÃ·¹ÀÌ¾î °ø°Ý ÀûÁß! -> {other.name}¿¡°Ô {attackDamage} µ¥¹ÌÁö");
+                Debug.Log($"ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½! -> {other.name}ï¿½ï¿½ï¿½ï¿½ {attackDamage} ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
             }
             else if (enemyHealth == null)
             {
-                Debug.LogError(other.name + "¿¡´Â Health ½ºÅ©¸³Æ®°¡ ¾ø½À´Ï´Ù.");
+                Debug.LogError(other.name + "ï¿½ï¿½ï¿½ï¿½ Health ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
         }
     }

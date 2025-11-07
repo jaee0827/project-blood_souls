@@ -15,7 +15,7 @@ public class LifeSteal : MonoBehaviour {
         float healAmount = damage * lifeStealRate; // 흡혈량 계산
 
         Health health = GetComponent<Health>();
-        if (health == null) {
+        if (health is null) {
             return 0.0f;
         }
 

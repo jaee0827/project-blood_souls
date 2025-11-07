@@ -7,7 +7,7 @@ public class AttackEx : MonoBehaviour {
     private bool hasHit = false;
 
     void Update() {
-        if (Input.GetKey(KeyCode.D) && !hasHit) {
+        if (Input.GetKey(KeyCode.X) && !hasHit) {
             hasHit = true;
 
             GameObject enemy = GameObject.FindGameObjectWithTag("Enemy"); // 적 지정
@@ -29,7 +29,7 @@ public class AttackEx : MonoBehaviour {
                 }
             }
 
-        } else if (Input.GetKey(KeyCode.S)) {
+        } else if (Input.GetKey(KeyCode.Z)) {
             hasHit = false; // 연속 입력 방지
         }
     }
