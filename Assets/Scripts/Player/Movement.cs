@@ -8,10 +8,10 @@ public class Movement : MonoBehaviour
 
     // 점프 설정
     [Header("Jump Settings")]
-    public float jumpForce = 8f;                 // 점프 힘 (Impulse 기준)
-    public LayerMask groundMask;                 // 바닥 레이어
+    public float jumpForce = 8f;                // 점프 힘 (Impulse 기준)
+    public LayerMask groundMask;                // 바닥 레이어
     public Vector2 groundCheckOffset = new(0f, -0.5f); // 바닥 체크 위치 오프셋
-    public float groundCheckRadius = 0.2f;       // 바닥 체크 반경
+    public float groundCheckRadius = 0.2f;      // 바닥 체크 반경
 
     // 조작감 향상 기능
     [Header("Feel Improvements")]
@@ -40,6 +40,10 @@ public class Movement : MonoBehaviour
         // 1. 입력 처리 (WASD 및 스페이스바)
         inputVec.x = Input.GetAxisRaw("Horizontal");
         // inputVec.y는 필요 없으므로 사용하지 않음
+
+        // --- [추가] 스프라이트 뒤집기 처리 ---
+        FlipSprite();
+        // ------------------------------------
 
         // 2. 점프 입력 버퍼 처리
         if (Input.GetKeyDown(KeyCode.Space))
@@ -110,6 +114,32 @@ public class Movement : MonoBehaviour
         // X축 속도만 변경
         rigid.linearVelocity = new Vector2(targetVelocityX, currentVelocity.y);
     }
+
+    // --- [추가] 스프라이트 좌우 반전 함수 ---
+    private void FlipSprite()
+    {
+        // 1. 이동 방향 입력이 있을 때만 (0이 아닐 때)
+        if (inputVec.x != 0)
+        {
+            // 2. inputVec.x가 0보다 크면 true (오른쪽), 아니면 false (왼쪽)
+            bool isMovingRight = inputVec.x > 0;
+
+            // 3. 현재 스케일의 x값을 가져옴
+            float currentScaleX = transform.localScale.x;
+
+            // 4. 오른쪽으로 가는데 스케일이 음수(왼쪽)이거나,
+            //    왼쪽으로 가는데 스케일이 양수(오른쪽)이면 뒤집음
+            if ((isMovingRight && currentScaleX < 0) || (!isMovingRight && currentScaleX > 0))
+            {
+                // 5. x 스케일의 부호만 변경
+                Vector3 newScale = transform.localScale;
+                newScale.x *= -1;
+                transform.localScale = newScale;
+            }
+        }
+        // 6. inputVec.x == 0 일 때는 (멈췄을 때) 아무것도 하지 않고 마지막 방향을 유지
+    }
+    // ------------------------------------
 
     // 에디터에서 바닥 체크 Gizmo 보기 (디버깅)
     void OnDrawGizmosSelected()
