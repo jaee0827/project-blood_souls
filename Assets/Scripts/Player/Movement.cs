@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
     // 시간 측정 타이머
     private float coyoteTimer;   // 코요테 타임 타이머
     private float jumpBufferTimer; // 점프 버퍼 타이머
+    private bool hasJumpedInAir; // 공중 점프 여부 확인
 
     void Awake()
     {
@@ -58,7 +59,7 @@ public class Movement : MonoBehaviour
 
         // 2. 점프 실행 로직
         // 점프가 가능한 조건: (점프 버퍼가 남아있음) AND (코요테 타임이 남아있음)
-        if (jumpBufferTimer > 0f && coyoteTimer > 0f)
+        if (jumpBufferTimer > 0f && coyoteTimer > 0f && !hasJumpedInAir)
         {
             PerformJump();
         }
@@ -76,6 +77,7 @@ public class Movement : MonoBehaviour
         if (isGrounded)
         {
             coyoteTimer = coyoteTime; // 땅에 닿으면 코요테 타임 초기화
+            hasJumpedInAir = false; // 땅에 닿았으니 점프 여부 변경
         }
         else
         {
@@ -90,9 +92,10 @@ public class Movement : MonoBehaviour
         rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, 0f);
         rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-        // 점프가 실행되었으므로 두 타이머 모두 초기화
+        // 점프가 실행되었으므로 두 타이머와 점프 여부 모두 초기화
         jumpBufferTimer = 0f;
         coyoteTimer = 0f;
+        hasJumpedInAir = true;
     }
 
     // 수평 이동 함수

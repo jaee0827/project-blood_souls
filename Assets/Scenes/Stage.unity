@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 107039219}
   - component: {fileID: 107039218}
-  - component: {fileID: 107039217}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -137,52 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &107039217
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107039216}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!156049354 &107039218
 Grid:
   m_ObjectHideFlags: 0
@@ -204,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 107039216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.08, y: -1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -220,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203494545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_Attackbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349527575
 MonoBehaviour:
@@ -456,7 +409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 240}
+  m_AnchoredPosition: {x: -226, y: 183}
   m_SizeDelta: {x: 200, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689805655
@@ -521,7 +474,7 @@ GameObject:
   - component: {fileID: 794841314}
   - component: {fileID: 794841316}
   - component: {fileID: 794841315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Attackbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +567,7 @@ GameObject:
   - component: {fileID: 795306382}
   - component: {fileID: 795306381}
   - component: {fileID: 795306380}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +629,7 @@ Transform:
   m_GameObject: {fileID: 795306379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.08, y: -1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -716,7 +669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -289, y: 190}
+  m_AnchoredPosition: {x: -226, y: 148}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894210469
@@ -1317,7 +1270,7 @@ GameObject:
   - component: {fileID: 1088171311}
   - component: {fileID: 1088171308}
   - component: {fileID: 1088171310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1483,7 +1436,7 @@ Transform:
   m_GameObject: {fileID: 1088171302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.69, y: -2.21, z: 0}
+  m_LocalPosition: {x: 0.61, y: -3.4200003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1607,8 +1560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_SizeDelta: {x: -0.000015259, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1311852758
 GameObject:
@@ -1622,7 +1575,7 @@ GameObject:
   - component: {fileID: 1311852760}
   - component: {fileID: 1311852759}
   - component: {fileID: 1311852762}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1697,7 +1650,7 @@ Transform:
   m_GameObject: {fileID: 1311852758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -1.08, y: -1.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1766,7 +1719,7 @@ GameObject:
   - component: {fileID: 1370693541}
   - component: {fileID: 1370693540}
   - component: {fileID: 1370693542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1932,7 +1885,7 @@ Transform:
   m_GameObject: {fileID: 1370693532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -2.27, z: 0}
+  m_LocalPosition: {x: -1.13, y: -3.4800003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1986,7 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f1d88d31ecf2a48b45b99bbda98a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1370693535}
   attackHitbox: {fileID: 203494544}
   comboDelay: 1
   attack1Duration: 0.5
@@ -2041,7 +1994,7 @@ MonoBehaviour:
   jumpForce: 8
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   groundCheckOffset: {x: 0, y: -0.5}
   groundCheckRadius: 0.2
   coyoteTime: 0.15
