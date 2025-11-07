@@ -1,21 +1,20 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider2D))]
 public class Health : MonoBehaviour {
 
-    const float DefaultHealth = 100.0f; // 체력 기본값
+    private const float DefaultHealth = 100.0f; // 체력 기본값
 
-    [Header("Stat")] // 체력 설정
+    [Header("Stat")] // 수치 설정
     public float maxHealth = DefaultHealth;
     public float currentHealth = DefaultHealth;
+    public float tickDamage = 1.0f;
 
     [Header("Animator")] // 애니메이터 설정
     public Animator animator;
 
     [Header("Event")] // 이벤트 설정
-    public UnityEvent<float, float> OnHealthChange;
+    public UnityEvent<float, float> onHealthChange;
 
     [HideInInspector]
     public bool isDead = false; // 사망 상태 변수
@@ -38,7 +37,7 @@ public class Health : MonoBehaviour {
 
         float preHealth = currentHealth;
         currentHealth = Mathf.Clamp(currentHealth + amount, 0.0f, maxHealth); // 체력 계산
-        OnHealthChange?.Invoke(currentHealth, maxHealth); // 이벤트 호출 (UI 변화 전용)
+        onHealthChange?.Invoke(currentHealth, maxHealth); // 이벤트 호출 (UI 변화 전용)
 
         if (currentHealth <= 0.0f) {
             Die(); // 체력 0 이하면 사망 처리

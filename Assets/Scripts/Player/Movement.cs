@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AdvancedPlayerMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     // 이동 설정
     [Header("Movement Settings")]
