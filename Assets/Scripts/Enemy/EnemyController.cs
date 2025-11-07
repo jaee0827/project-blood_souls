@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && !isAttacking)
+        if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             Attack();
         }
