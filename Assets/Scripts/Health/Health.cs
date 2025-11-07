@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider2D))]
 public class Health : MonoBehaviour {
 
     private const float DefaultHealth = 100.0f; // 체력 기본값
 
-    [Header("Stat")] // 체력 설정
+    [Header("Stat")] // 수치 설정
     public float maxHealth = DefaultHealth;
     public float currentHealth = DefaultHealth;
+    public float tickDamage = 1.0f;
 
     [Header("Animator")] // 애니메이터 설정
     public Animator animator;

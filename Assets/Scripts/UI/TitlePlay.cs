@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Button))]
 public class TitlePlay : MonoBehaviour {
 
     [Header("Start Scene")]
