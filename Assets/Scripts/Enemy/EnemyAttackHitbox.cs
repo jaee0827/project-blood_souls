@@ -1,44 +1,44 @@
-﻿using UnityEditor.Media;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyAttackHitbox : MonoBehaviour {
 
-    [Header("Stat")]
-    public float hitboxActiveDuration = 0.5f;
-    public float damage = 10.0f; // 피해량 설정
-    private GameObject playerTarget;
-    private bool hasHit;
+    private GameObject _playerTarget;
+    private float _damage;
+    private float _hitTime;
+    private bool _hasHit;
 
     void Start() {
         // ⭐ 추가: 시작 시 플래그를 초기화하여 이전 실행 상태의 잔여물을 제거합니다.
-        hasHit = false;
+        _hasHit = false;
     }
 
-    public void StartAttack(GameObject player) {
-        playerTarget = player;
-        hasHit = false; // 공격 시작 시 플래그 초기화
-        this.gameObject.SetActive(true);
+    public void StartAttack(GameObject player, float damage, float hitTime) {
+        _playerTarget = player;
+        _damage = damage;
+        _hitTime = hitTime;
+        _hasHit = false; // 공격 시작 시 플래그 초기화
+        gameObject.SetActive(true);
 
-        Invoke("DisableHitbox", hitboxActiveDuration);
+        Invoke(nameof(DisableHitbox), _hitTime);
     }
 
     void DisableHitbox() {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D target) {
-        if (hasHit) {
+        if (_hasHit) {
             return;
         }
 
-        if (target.gameObject.CompareTag("Player")) {
-            hasHit = true;
+        if (target.gameObject.Equals(_playerTarget)) {
+            _hasHit = true;
 
             GameObject hitTarget = target.gameObject;
             PlayerComboAttack playerAttack = hitTarget.GetComponentInParent<PlayerComboAttack>();
 
             if (playerAttack != null) {
-                playerAttack.OnHitReceived(hitboxActiveDuration, damage);
+                playerAttack.OnHitReceived(_hitTime, _damage);
 
                 Debug.Log($"{gameObject.name} 피격");
             }

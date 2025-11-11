@@ -85,14 +85,14 @@ public class EnemyController : MonoBehaviour
             {
                 playerRb.WakeUp();
             }
-            hitboxScript.StartAttack(player);
+            hitboxScript.StartAttack(player, 10, 0.5f);
         }
         else
         {
             Debug.LogError("주인공 오브젝트(태그: Player)를 찾을 수 없습니다.");
         }
 
-        Invoke("ResetAttack", attackDuration);
+        Invoke(nameof(ResetAttack), attackDuration);
     }
 
     void ResetAttack()

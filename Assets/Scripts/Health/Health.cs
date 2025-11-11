@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
     public Animator animator;
 
     [Header("Event")] // 이벤트 설정
-    public UnityEvent<float, float> OnHealthChange;
+    public UnityEvent<float, float> onHealthChange;
 
     [HideInInspector]
     public bool isDead; // 사망 상태 변수
@@ -29,19 +29,22 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        currentHealth = Mathf.Clamp(currentHealth, 0.0f, maxHealth); // 잘못된 현재 체력 정정
-
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
         
-        isDead = false;
-        isInvincible = false;
+        Reset();
     }
 
     // 초기화 함수
-    void Reset() => currentHealth = maxHealth;
+    void Reset()
+    {
+        currentHealth = Mathf.Clamp(currentHealth, 0.0f, maxHealth); // 잘못된 현재 체력 정정
+
+        isDead = false;
+        isInvincible = false;
+    }
 
     // (사용자님이 추가하신 Update 함수)
     void FixedUpdate()
@@ -58,7 +61,7 @@ public class Health : MonoBehaviour
     {
         // --- [추가] 무적 상태이거나 죽었으면 데미지 무시 ---
         // (amount < 0 : 데미지를 입는 경우)
-        if (isDead || (isInvincible && amount < 0))
+        if (isDead || isInvincible || amount < 0)
         {
             return 0;
         }
@@ -72,13 +75,14 @@ public class Health : MonoBehaviour
 
         float preHealth = currentHealth;
         currentHealth = Mathf.Clamp(currentHealth + amount, 0.0f, maxHealth); // 체력 계산
-        OnHealthChange?.Invoke(currentHealth, maxHealth); // 이벤트 호출 (UI 변화 전용)
+        onHealthChange?.Invoke(currentHealth, maxHealth); // 이벤트 호출 (UI 변화 전용)
 
         if (currentHealth <= 0.0f)
         {
             Die(); // 체력 0 이하면 사망 처리
 
         }
+        
         else if (!isDrain && amount < 0 && animator != null)
         {
             // (오류 방지를 위해 HasParameter 체크를 추천합니다)

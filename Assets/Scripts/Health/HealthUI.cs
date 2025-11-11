@@ -11,7 +11,7 @@ public class HealthUI : MonoBehaviour {
 
     void Start() {
         if (health != null) {
-            health.OnHealthChange.AddListener(UpdateUI); // 이벤트 리스너 등록
+            health.onHealthChange.AddListener(UpdateUI); // 이벤트 리스너 등록
 
             UpdateUI(health.currentHealth, health.maxHealth); // UI 초기 설정
         }
