@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +18,9 @@ public class Health : MonoBehaviour
 
     [Header("Event")] // 이벤트 설정
     public UnityEvent<float, float> onHealthChange;
+    
+    [Header("Pause Canvas")]
+    public GameObject pause;
 
     [HideInInspector]
     public bool isDead; // 사망 상태 변수
@@ -29,12 +33,9 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
-        
         Reset();
+        
+        pause.SetActive(false);
     }
 
     // 초기화 함수
@@ -47,12 +48,20 @@ public class Health : MonoBehaviour
     }
 
     // (사용자님이 추가하신 Update 함수)
-    void FixedUpdate()
+    void Update()
     {
         if (drainDamage > 0.0f && !isDead)
         {
+            Damage(drainDamage * Time.deltaTime, true);
             // (참고: isInvincible이 true면 Damage 함수가 알아서 0을 반환합니다)
-            Damage(drainDamage * Time.fixedDeltaTime, true);
+        }
+        
+        if (!pause.activeSelf && Input.GetKeyDown(KeyCode.Escape)) {
+            PauseOpen pauseOpen = pause.GetComponent<PauseOpen>();
+            if (pauseOpen != null)
+            {
+                pauseOpen.Pause("PAUSE");
+            }
         }
     }
 
@@ -61,7 +70,7 @@ public class Health : MonoBehaviour
     {
         // --- [추가] 무적 상태이거나 죽었으면 데미지 무시 ---
         // (amount < 0 : 데미지를 입는 경우)
-        if (isDead || isInvincible || amount < 0)
+        if (isDead || isInvincible || amount == 0)
         {
             return 0;
         }
@@ -80,19 +89,18 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0.0f)
         {
             Die(); // 체력 0 이하면 사망 처리
-
         }
         
         else if (!isDrain && amount < 0 && animator != null)
         {
             // (오류 방지를 위해 HasParameter 체크를 추천합니다)
-            animator.SetTrigger("Hit"); // 피격 애니메이션
+            animator.SetTrigger("Hurt"); // 피격 애니메이션
         }
 
         if (!isDrain)
         {
             string prefix = currentHealth > preHealth ? "+" : "";
-            Debug.Log($"{gameObject.name} 체력 변화: {preHealth} -> {currentHealth} ({prefix}{currentHealth - preHealth})"); // 로그 출력
+            StartCoroutine(SendLog($"{gameObject.name} 체력 변화: {preHealth} -> {currentHealth} ({prefix}{currentHealth - preHealth})")); // 로그 출력
         }
 
         return currentHealth - preHealth;
@@ -130,6 +138,25 @@ public class Health : MonoBehaviour
             animator.SetTrigger("Death"); // 사망 애니메이션
         }
 
-        Debug.Log($"{gameObject.name} 사망"); // 로그 출력
+        StartCoroutine(SendLog($"{gameObject.name} 사망")); // 로그 출력
+        
+        StartCoroutine(OpenPause(gameObject.tag.Equals("Player") ? "GAME OVER" : "STAGE CLEAR"));
     }
+    
+    private IEnumerator OpenPause(string title) {
+        yield return new WaitForSeconds(5);
+        
+        PauseOpen pauseOpen = pause.GetComponent<PauseOpen>();
+        if (pauseOpen != null)
+        {
+            pauseOpen.Pause(title);
+        }
+    }
+
+    private IEnumerator SendLog(string message)
+    {
+        yield return new WaitForSeconds(0.001f);
+        Debug.Log(message);
+    }
+    
 }

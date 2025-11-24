@@ -7,23 +7,21 @@ public class LifeSteal : MonoBehaviour {
     public float lifeStealRate = 20;
 
     // 흡혈 실행 함수
-    public float ExecuteSteal(float damage) {
+    public void ExecuteSteal(float damage) {
         if (lifeStealRate <= 0) {
-            return 0.0f;
+            return;
         }
 
         float healAmount = damage * lifeStealRate * 0.01f; // 흡혈량 계산
 
         Health health = GetComponent<Health>();
-        if (health is null) {
-            return 0.0f;
+        if (health == null) {
+            return;
         }
 
         float heal = health.Heal(healAmount); // 플레이어 회복
 
         Debug.Log($"{gameObject.name} 흡혈: {heal}"); // 로그 출력
-
-        return heal;
     }
 
 }

@@ -85,7 +85,7 @@ public class EnemyController : MonoBehaviour
             {
                 playerRb.WakeUp();
             }
-            hitboxScript.StartAttack(player, 10, 0.5f);
+            hitboxScript.StartAttack(player, 10, 0.5f, 0.5f);
         }
         else
         {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Pattern : MonoBehaviour {
 
@@ -10,29 +11,44 @@ public class Pattern : MonoBehaviour {
     public float chance = 20;
     public float cool = 10;
     public float duration = 1.0f;
+    public float speed = 10;
 
-    [Header("Component")]
+    [Header("Object")]
     public GameObject player;
     public GameObject hitbox;
+    
+    [Header("Animator")]
+    public Animator animator;
     
     private float _timer;
     private bool _enabled;
     private float _cooldown;
-    private Transform _enemyTransform;
+    private Rigidbody2D _rigidbody;
+    private Vector2 _position;
 
     private void Start()
     {
         Reset();
+        
+        _rigidbody = hitbox.GetComponent<Rigidbody2D>();
+        _position = _rigidbody.position;
+        
+        hitbox.SetActive(false);
     }
 
     private void Reset()
     {
         _enabled = true;
         _cooldown = 0;
-        _enemyTransform = transform;
     }
     
-    private void FixedUpdate() {
+    private void Update() {
+        Health health = player.GetComponent<Health>();
+        if (health == null || health.isDead)
+        {
+            return;
+        }
+        
         if (_enabled) {
             _timer += Time.deltaTime;
 
@@ -46,22 +62,20 @@ public class Pattern : MonoBehaviour {
                     gameObject.tag = "UsedPattern";
 
                     EnemyAttackHitbox enemyAttackHitbox = hitbox.GetComponent<EnemyAttackHitbox>();
-                    if (enemyAttackHitbox == null || !UsePattern())
+                    if (enemyAttackHitbox == null)
                     {
                         return;
                     }
                     
-                    enemyAttackHitbox.StartAttack(player, damage, hitTime);
+                    StartCoroutine(UsePattern(enemyAttackHitbox));
                     
                     Debug.Log($"{gameObject.name} 패턴 사용: {pattern}");
-
-                    Invoke(nameof(ChangeTag), duration);
                     return;
                 }
             }
         }
         
-        _cooldown += Time.fixedDeltaTime;
+        _cooldown += Time.deltaTime;
         
         if (_cooldown < cool) {
             return;
@@ -70,37 +84,44 @@ public class Pattern : MonoBehaviour {
         Reset();
     }
     
-    private bool UsePattern()
+    private IEnumerator UsePattern(EnemyAttackHitbox enemyAttackHitbox)
     {
-        switch (pattern)
-        {
-            case "front":
-                for (int i = 0; i < 5; i++)
-                {
-                    Invoke(nameof(ExecuteDelayed), 0.5f);
-                }
-
-                return true;
-            
-            case "":
-                return true;
-        }
+        hitbox.SetActive(true);
         
-        return false;
-    }
+        _rigidbody.MovePosition(_position);
+        
+        yield return new WaitForSeconds(0.5f);
 
-    private void ExecuteDelayed()
-    {
+        enemyAttackHitbox.StartAttack(player, damage, hitTime, duration);
+
+        if (animator != null)
+        {
+            animator.SetBool("Shooting", true);
+        }
+
         switch (pattern)
         {
             case "front":
-                hitbox.transform.position = (Vector2)_enemyTransform.position + new Vector2(1.0f, 0.0f);
+                _rigidbody.linearVelocity = new Vector2(-1 * speed, 0);
+                break;
+            
+            case "smash":
+                _rigidbody.linearVelocity = new Vector2(-1 * speed, 0);
                 break;
         }
-    }
-    
-    private void ChangeTag() {
+
+        yield return new WaitForSeconds(duration - 0.5f);
+
         gameObject.tag = "Boss";
+
+        _rigidbody.linearVelocity = Vector2.zero;
+        
+        if (animator != null)
+        {
+            animator.SetBool("Shooting", false);
+        }
+
+        hitbox.SetActive(false);
     }
 
 }

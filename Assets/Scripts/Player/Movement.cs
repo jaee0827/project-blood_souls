@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 
     // 점프 설정
     [Header("Jump Settings")]
-    public float jumpForce = 8f;                // 점프 힘 (Impulse 기준)
+    public float jumpForce = 6f;                // 점프 힘 (Impulse 기준)
     public LayerMask groundMask;                // 바닥 레이어
     public Vector2 groundCheckOffset = new(0f, -0.5f); // 바닥 체크 위치 오프셋
     public float groundCheckRadius = 0.2f;      // 바닥 체크 반경
@@ -37,6 +37,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (gameObject.GetComponent<Health>().isDead)
+        {
+            rigid.linearVelocity = Vector2.zero;
+            return;
+        }
+        
         // 1. 입력 처리 (WASD 및 스페이스바)
         inputVec.x = Input.GetAxisRaw("Horizontal");
         // inputVec.y는 필요 없으므로 사용하지 않음
@@ -46,7 +52,7 @@ public class Movement : MonoBehaviour
         // ------------------------------------
 
         // 2. 점프 입력 버퍼 처리
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             jumpBufferTimer = jumpBufferTime; // 점프 입력을 기록
         }
@@ -58,6 +64,12 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (gameObject.GetComponent<Health>().isDead)
+        {
+            rigid.linearVelocity = Vector2.zero;
+            return;
+        }
+
         // 1. 바닥 체크 및 코요테 타임 처리
         CheckGround();
 
@@ -113,6 +125,12 @@ public class Movement : MonoBehaviour
 
         // X축 속도만 변경
         rigid.linearVelocity = new Vector2(targetVelocityX, currentVelocity.y);
+        
+        float x = rigid.position.x;
+        if (x < -9.5f || x > 7.5f)
+        {
+            rigid.position = new Vector2(Mathf.Clamp(x, -9.5f, 7.5f), rigid.position.y);
+        }
     }
 
     // --- [추가] 스프라이트 좌우 반전 함수 ---

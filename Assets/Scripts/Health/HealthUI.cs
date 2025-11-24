@@ -24,7 +24,7 @@ public class HealthUI : MonoBehaviour {
         }
         
         if (healthText != null) {
-            healthText.text = $"{current:0}"; // 텍스트 설정
+            healthText.text = $"{Mathf.Ceil(current):0}"; // 텍스트 설정
         }
     }
 }

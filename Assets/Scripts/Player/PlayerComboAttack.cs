@@ -36,19 +36,21 @@ public class PlayerComboAttack : MonoBehaviour
     [Header("패링 및 피격 설정")]
     public float parryMotionDuration = 0.3f; // 방패 드는 모션 길이
     public float parryGoodDuration = 0.8f;   // 패링 성공 모션 길이
-    public float dieDuration = 2.0f;         // 사망 애니메이션 길이
     public float parryRecoveryTime = 0.1f;
     public float hitDuration = 0.5f;
 
     [Header("구르기 설정")]
     public float dodgeDuration = 0.4f;
     public float dodgeSpeed = 12f;
-    public float dodgeCooldown = 0.5f;
-    public KeyCode dodgeKey = KeyCode.LeftShift;
+    public float dodgeCooldown = 1.0f;
     [Tooltip("구르기 시 적용할 콜라이더 크기")]
     public Vector2 rollingColliderSize = new Vector2(1, 0.5f);
     [Tooltip("구르기 시 적용할 콜라이더 위치")]
-    public Vector2 rollingColliderOffset = new Vector2(0, -0.25f);
+    public Vector2 rollingColliderOffset = new Vector2(0, 0);
+    
+    [Header("키 설정")]
+    public KeyCode attackKey = KeyCode.Mouse0;
+    public KeyCode dodgeKey = KeyCode.LeftShift;
 
     // === 내부 시스템 변수 ===
     private Rigidbody2D rb;
@@ -90,8 +92,17 @@ public class PlayerComboAttack : MonoBehaviour
 
     void Update()
     {
+        if (playerHealth.isDead)
+        {
+            currentState = PlayerState.Dead;
+            return;
+        }
+        
         // 플레이어가 죽었으면 아무것도 안 함
-        if (currentState == PlayerState.Dead) return;
+        if (currentState == PlayerState.Dead)
+        {
+            return;
+        }
 
         // 캐릭터 방향 체크
         if (transform.localScale.x > 0) isFacingRight = true;
@@ -143,25 +154,25 @@ public class PlayerComboAttack : MonoBehaviour
         }
 
         // 2. 공격 / 패링 입력 (N키)
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(attackKey))
         {
+            StartCoroutine(AttackRoutine());
             // 2-1. 패링 입력 (M + N)
-            if (Input.GetKey(KeyCode.M))
-            {
-                StartCoroutine(ParryMotionRoutine());
-            }
+            // if (Input.GetKey(KeyCode.M))
+            // {
+            //     StartCoroutine(ParryMotionRoutine());
+            // }
             // 2-2. 일반 공격 (N)
-            else
-            {
-                StartCoroutine(AttackRoutine());
-            }
+            //else
+            //{
+            //}
         }
     }
 
     void HandleAttackingInput()
     {
         // 콤보 다음타 입력 (N키)
-        if (Input.GetKeyDown(KeyCode.N) && comboStep < 3)
+        if (Input.GetKeyDown(attackKey) && comboStep < 3)
         {
             shouldAdvanceCombo = true;
         }
@@ -170,7 +181,7 @@ public class PlayerComboAttack : MonoBehaviour
     void HandleHitStunInput()
     {
         // 피격 중 패링 성공 입력 (M + N)
-        if (Input.GetKey(KeyCode.M) && Input.GetKey(KeyCode.N))
+        if (Input.GetKey(KeyCode.M) && Input.GetKey(attackKey))
         {
             // 패링 타이머 코루틴이 돌고 있을 때만 성공
             if (parryTimerCoroutine != null)
@@ -186,12 +197,12 @@ public class PlayerComboAttack : MonoBehaviour
     // 피격/패링 로직
     // =========================================================================
 
-    public void OnHitReceived(float parryWindow, float damage)
+    public bool OnHitReceived(float parryWindow, float damage)
     {
         // 구르기(무적) 중이거나, 이미 피격/사망 상태면 무시
         if (currentState == PlayerState.Rolling || currentState == PlayerState.HitStun || currentState == PlayerState.Dead)
         {
-            return;
+            return false;
         }
 
         // 다른 모든 행동(공격, 패링 시도)을 즉시 중지
@@ -200,10 +211,13 @@ public class PlayerComboAttack : MonoBehaviour
 
         currentState = PlayerState.HitStun; // '피격' 상태로 전환
         receivedDamage = damage;
-        anim.SetTrigger("Parry"); // (피격 시 패링 시도 모션)
+        
+        StartCoroutine(FailParryRoutine());
+        // anim.SetTrigger("Parry"); // (피격 시 패링 시도 모션)
 
         // 패링 성공/실패를 결정하는 타이머 시작
-        parryTimerCoroutine = StartCoroutine(ParryWindowTimer(parryWindow));
+        // parryTimerCoroutine = StartCoroutine(ParryWindowTimer(parryWindow));
+        return true;
     }
 
     IEnumerator ParryWindowTimer(float duration)
@@ -230,19 +244,9 @@ public class PlayerComboAttack : MonoBehaviour
         if (playerHealth != null && !playerHealth.isDead)
         {
             playerHealth.Damage(receivedDamage); // 플레이어 피해
-        }
-
-        // 사망 처리
-        if (playerHealth != null && playerHealth.isDead)
-        {
-            currentState = PlayerState.Dead; // '사망' 상태
-            yield return new WaitForSeconds(dieDuration);
-            // (게임 오버 로직 등)
-        }
-        else
-        {
-            // 피격 모션(HitStun) 시간
+            
             yield return new WaitForSeconds(hitDuration);
+            
             if (currentState != PlayerState.Dead) // 그 사이에 죽지 않았다면
             {
                 currentState = PlayerState.Idle; // '기본' 상태로 복귀
