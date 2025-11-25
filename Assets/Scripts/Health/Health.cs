@@ -138,25 +138,49 @@ public class Health : MonoBehaviour
             animator.SetTrigger("Death"); // 사망 애니메이션
         }
 
-        StartCoroutine(SendLog($"{gameObject.name} 사망")); // 로그 출력
+        StartCoroutine(SendLog($"{gameObject.name} 사망", true)); // 로그 출력
         
-        StartCoroutine(OpenPause(gameObject.tag.Equals("Player") ? "GAME OVER" : "STAGE CLEAR"));
+        StartCoroutine(OpenPause(gameObject.tag.Equals("Player")));
     }
     
-    private IEnumerator OpenPause(string title) {
+    private IEnumerator OpenPause(bool isOver) {
+        if (!isOver)
+        {
+            StartCoroutine(BossDeath(gameObject.GetComponent<Rigidbody2D>()));
+        }
+        
         yield return new WaitForSeconds(5);
         
         PauseOpen pauseOpen = pause.GetComponent<PauseOpen>();
         if (pauseOpen != null)
         {
-            pauseOpen.Pause(title);
+            pauseOpen.Pause(isOver ? "GAME OVER" : "STAGE CLEAR");
         }
     }
 
-    private IEnumerator SendLog(string message)
+    private IEnumerator SendLog(string message, bool delay = false)
     {
-        yield return new WaitForSeconds(0.001f);
+        yield return new WaitForSeconds(delay ? 0.01f : 0.001f);
         Debug.Log(message);
     }
     
+    private IEnumerator BossDeath(Rigidbody2D rb)
+    {
+        rb.linearVelocity = new Vector2(0, -2);
+
+        float x = rb.position.x;
+        for (int i = 0; i < 100; i++)
+        {
+            rb.position = new Vector2(x + 0.03f, rb.position.y);
+
+            yield return new WaitForSeconds(0.05f);
+
+            rb.position = new Vector2(x - 0.03f, rb.position.y);
+
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        rb.linearVelocity = Vector2.zero;
+    }
+
 }

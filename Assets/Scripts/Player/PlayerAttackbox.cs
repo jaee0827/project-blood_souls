@@ -48,11 +48,6 @@ public class PlayerAttackHitbox : MonoBehaviour
 
             float damage = -health.Damage(attackDamage);
 
-            if (health.isDead)
-            {
-                boss.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, -2);
-            }
-
             // 4. Health ��ũ��Ʈ�� 'Damage' �Լ��� ȣ���մϴ�.
             StartCoroutine(ExecuteLifeSteal(damage));
             Debug.Log($"{player.gameObject.name} 공격: {target.name} ({attackDamage})");
@@ -61,7 +56,7 @@ public class PlayerAttackHitbox : MonoBehaviour
             //alreadyHit.Add(target);
         }
     }
-    
+
     private IEnumerator ExecuteLifeSteal(float damage)
     {
         yield return new WaitForSeconds(0.001f);
